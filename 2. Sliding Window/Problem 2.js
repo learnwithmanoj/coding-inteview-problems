@@ -1,4 +1,4 @@
-//Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’.
+/* Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’. */
 function max_sub_array_of_size_k(k, arr) {
     let currentMaximumSum = 0;
     let windowStart = 0;

@@ -1,4 +1,4 @@
-//Given an array, find the average of all contiguous subarrays of size 'k' in it.
+/* Given an array, find the average of all contiguous subarrays of size 'k' in it. */
 function find_averages_of_subarrays(k, arr) {
     const result = [];
     let sum = 0.0;

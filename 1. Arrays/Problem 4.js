@@ -9,21 +9,21 @@ function four_number_sum(array, targetSum) {
     let allPairSums = {};
     let quadruplets = [];
     for (let i = 1; i < array.length - 1; i++) {
-        for (let j = i + 1; i < array.length; j++) {
+        for (let j = i + 1; j < array.length; j++) {
             let currentSum = array[i] + array[j];
             let diff = targetSum - currentSum;
             if (diff in allPairSums) {
                 for (let pair of allPairSums[diff]) {
-                    quadruplets.push(pair.concat([array[i] + array[j]]));
+                    quadruplets.push(pair.concat([array[i], array[j]]));
                 }
             }
         }
         for (let k = 0; k < i; k++) {
             let currentSum = array[i] + array[k];
-            if(currentSum in allPairSums) {
-                allPairSums[currentSum].push([array[i], array[k]]);
+            if (currentSum in allPairSums) {
+                allPairSums[currentSum].push([array[k], array[i]]);
             } else {
-                allPairSums[currentSum] = [[array[i], array[k]]];
+                allPairSums[currentSum] = [[array[k], array[i]]];
             }
         }
     }

@@ -1,4 +1,8 @@
 /* Given a string, find the length of the longest substring in it with no more than 'k' distinct characters. */
+/* 
+    Time Complexity: O(n)
+    Space Complexity: O(k)
+*/
 function longest_substring_with_k_distinct(str, k) {
     let windowStart = 0;
     let maxLength = 0;

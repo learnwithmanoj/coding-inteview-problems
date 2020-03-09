@@ -1,4 +1,8 @@
 /* Given an array of integers, find the most frequent integer */
+/* 
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+*/
 function most_frequent_integer(inputArray) {
     let map = new Map();
     for (let i = 0; i < inputArray.length; i++) {
